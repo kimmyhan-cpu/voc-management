@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://kimmyhan-cpu.github.io/voc-management/reports/2026-02-voc-report1.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOC 리포트 · 2026년 2월</title>
+<script src="./VOC 리포트 2026년 2월_files/html2canvas.min.js"></script>
+<script src="./VOC 리포트 2026년 2월_files/jspdf.umd.min.js"></script>
+<link href="./VOC 리포트 2026년 2월_files/css2" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f8f9fa;--white:#fff;--border:#e8eaed;--blue:#3182f6;--blue-l:#ebf3fe;--red:#f04452;--red-l:#fff0f1;--green:#00b493;--green-l:#e8faf6;--orange:#ff6b2b;--orange-l:#fff3ee;--purple:#8b5cf6;--purple-l:#f3f0ff;--teal:#0891b2;--teal-l:#e0f7fa;--pink:#db2777;--pink-l:#fdf2f8;--g900:#191f28;--g700:#3d4350;--g500:#6b7684;--g300:#b0b8c1;--g100:#f2f4f6}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);color:var(--g900);padding-bottom:80px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.hdr{background:#fff;border-bottom:1px solid var(--border);padding:18px 0;margin-bottom:32px;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.05)}
+.hdr-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.hdr h1{font-size:18px;font-weight:700}
+.hdr-r{display:flex;align-items:center;gap:8px}
+.ptag{background:var(--blue-l);color:var(--blue);font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.kc{background:#fff;border-radius:16px;border:1px solid var(--border);padding:20px}
+.kico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px}
+.klbl{font-size:12px;font-weight:500;color:var(--g500);margin-bottom:6px}
+.kval{font-size:26px;font-weight:800;letter-spacing:-.5px;line-height:1}
+.kval em{font-size:14px;font-weight:500;color:var(--g500);font-style:normal;margin-left:2px}
+.kbadge{display:inline-block;font-size:12px;font-weight:600;padding:3px 8px;border-radius:6px;margin-top:8px}
+.card{background:#fff;border-radius:16px;border:1px solid var(--border);padding:24px;margin-bottom:16px}
+.sh{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
+.st{font-size:16px;font-weight:700}
+.sd{font-size:13px;color:var(--g500);margin-top:3px}
+.sg{display:grid;gap:10px;margin-bottom:10px}
+.sc{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:16px;cursor:pointer;transition:all .15s;position:relative;overflow:hidden}
+.sc:hover{border-color:var(--sc);box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sc.active{border-color:var(--sc);background:var(--sb)}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sc);border-radius:3px 3px 0 0}
+.sn{font-size:11px;font-weight:600;color:var(--g500);margin-bottom:8px}
+.sv{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.sv em{font-size:12px;font-weight:500;color:var(--g500);font-style:normal}
+.spct{font-size:11px;color:var(--g500);margin-top:4px}
+.sbb{margin-top:10px;background:var(--g100);border-radius:4px;height:4px}
+.sbf{height:4px;border-radius:4px;background:var(--sc)}
+.det{background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:10px;display:none}
+.det.open{display:block;animation:fu .2s ease}
+@keyframes fu{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.dh{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.dt{font-size:14px;font-weight:700}
+.tl{display:flex;flex-direction:column;gap:7px}
+.tr2{display:flex;align-items:center;gap:12px;padding:10px 12px;background:var(--g100);border-radius:10px}
+.tn{font-size:13px;font-weight:500;color:var(--g700);flex:1}
+.tbb{width:100px;background:var(--border);border-radius:4px;height:6px;flex-shrink:0}
+.tbf{height:6px;border-radius:4px}
+.tc{font-size:13px;font-weight:700;min-width:36px;text-align:right}
+.sbc{display:flex;flex-direction:column;gap:12px}
+.sbcr{display:flex;align-items:center;gap:12px}
+.sbcl{font-size:12px;font-weight:600;color:var(--g700);width:100px;flex-shrink:0}
+.sbcw{flex:1;background:var(--g100);border-radius:6px;height:26px;overflow:hidden}
+.sbcf{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:10px;min-width:36px}
+.sbcfl{font-size:11px;font-weight:700;color:#fff;white-space:nowrap}
+.sbcn{font-size:13px;font-weight:700;width:48px;text-align:right;flex-shrink:0}
+.tt{width:100%;border-collapse:collapse}
+.tt th{font-size:12px;font-weight:600;color:var(--g500);text-align:center;padding:10px 12px;background:var(--g100)}
+.tt th:first-child{border-radius:10px 0 0 10px;text-align:left}
+.tt th:last-child{border-radius:0 10px 10px 0}
+.tt td{padding:8px 10px;border-bottom:1px solid var(--border);text-align:center}
+.tt td:first-child{text-align:left}
+.tt td input{width:100%;background:transparent;border:none;border-bottom:1.5px solid transparent;padding:5px 4px;font-family:inherit;font-size:13px;color:var(--g900);outline:none;transition:border-color .15s;text-align:center}
+.tt td:first-child input{text-align:left}
+.tt td input:focus{border-bottom-color:var(--blue)}
+.tt tr:last-child td{background:var(--blue-l);font-weight:700}
+.tt tr:hover td{background:var(--g100)}
+.tt tr:last-child:hover td{background:var(--blue-l)}
+.il{display:flex;flex-direction:column;gap:10px}
+.ii{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--g100);border-radius:12px}
+.ib2{font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;white-space:nowrap;flex-shrink:0;margin-top:1px}
+.ibo{flex:1}.it{font-size:14px;font-weight:600;margin-bottom:3px}
+.id2{font-size:13px;color:var(--g500)}.im{font-size:11px;color:var(--g300);margin-top:4px}
+.iml{display:flex;flex-direction:column;gap:10px}
+.imi{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--g100);border-radius:12px}
+.pd{width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.imb{flex:1}.imt{font-size:14px;font-weight:600;margin-bottom:3px}.imd{font-size:13px;color:var(--g500)}
+.lbl{font-size:13px;font-weight:600;color:var(--g700);margin-bottom:6px;display:block}
+.inp{width:100%;background:var(--g100);border:1.5px solid transparent;border-radius:10px;padding:11px 14px;color:var(--g900);font-family:inherit;font-size:14px;outline:none;transition:all .15s}
+.inp:focus{background:#fff;border-color:var(--blue);box-shadow:0 0 0 3px rgba(49,130,246,.1)}
+.inp::placeholder{color:var(--g300)}.inp.ta{resize:vertical;min-height:88px}
+select.inp{cursor:pointer}
+.fg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px}
+.fg4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:14px}
+.btn{border:none;border-radius:10px;padding:10px 18px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:6px}
+.btn-b{background:var(--blue);color:#fff}.btn-b:hover{background:#1c6ef2}
+.btn-o{background:#fff;color:var(--g700);border:1.5px solid var(--border)}.btn-o:hover{border-color:var(--blue);color:var(--blue)}
+.btn-p{background:var(--g900);color:#fff}.btn-p:hover{background:#2d3748}
+.btn-g{background:#fff;color:var(--g700);border:1.5px solid var(--border)}.btn-g:hover{border-color:var(--green);color:var(--green)}
+.btn-sm{padding:7px 14px;font-size:13px;border-radius:8px}
+.db{background:none;border:none;color:var(--g300);cursor:pointer;font-size:15px;padding:0 4px;transition:color .15s;flex-shrink:0}
+.db:hover{color:var(--red)}
+.gl{font-size:11px;font-weight:600;color:var(--g300);margin-bottom:8px;letter-spacing:.5px}
+.ov{position:fixed;inset:0;background:rgba(25,31,40,.7);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:9999}
+.ov.show{display:flex}
+.spinner{width:40px;height:40px;border:3px solid rgba(255,255,255,.2);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;margin-bottom:16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ov p{color:#fff;font-size:14px;font-weight:500}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(16px);background:var(--g900);color:#fff;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:500;opacity:0;transition:all .25s;pointer-events:none;z-index:9998;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:768px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.fg3,.fg4{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-in">
+    <h1 contenteditable="true" style="outline: none; cursor: text; border-bottom: 2px dashed transparent;" onmouseover="this.style.borderBottomColor=&#39;#e8eaed&#39;" onmouseout="this.style.borderBottomColor=&#39;transparent&#39;">📊 VOC 리포트</h1>
+    <div class="hdr-r">
+      <span class="ptag" contenteditable="true" style="outline:none;cursor:text">2026년 2월 · 02.01~02.28</span>
+      <button class="btn btn-g btn-sm" onclick="copyLink()">🔗 링크 복사</button>
+      <button class="btn btn-p btn-sm" onclick="downloadPDF()">📄 PDF 저장</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap" id="rc">
+  <div class="kpi-grid">
+    <div class="kc"><div class="kico" style="background:var(--blue-l)">💬</div><div class="klbl">전체 문의량</div><div class="kval">2,616<em>건</em></div><div class="kbadge" style="background:var(--blue-l);color:var(--blue)">상담사 처리 전체</div></div>
+    <div class="kc"><div class="kico" style="background:var(--purple-l)">👑</div><div class="klbl">VIP 인입</div><div class="kval">51<em>건</em></div><div class="kbadge" style="background:var(--purple-l);color:var(--purple)">전화+채팅</div></div>
+    <div class="kc"><div class="kico" style="background:var(--green-l)">⭐</div><div class="klbl">CSAT 평균</div><div class="kval">2.85<em>점</em></div><div class="kbadge" style="background:var(--green-l);color:var(--green)">참여 82건</div></div>
+    <div class="kc"><div class="kico" style="background:var(--orange-l)">📈</div><div class="klbl">CSAT 참여율</div><div class="kval">3.1<em>%</em></div><div class="kbadge" style="background:var(--orange-l);color:var(--orange)">82/2,616건</div></div>
+  </div>
+
+  <div class="card">
+    <div class="sh"><div><div class="st">신청 단계별 문의 인입량</div><div class="sd">카드 클릭 시 세부 유형 확인 · 총 2,452건 분류</div></div></div>
+    <div class="gl">경정청구 단계</div>
+    <div class="sg" style="grid-template-columns:repeat(5,1fr)">
+      <div class="sc" style="--sc:#f04452;--sb:#fff0f1" onclick="td(&#39;환급완료&#39;,this)"><div class="sn">환급완료</div><div class="sv">747<em>건</em></div><div class="spct">30.5%</div><div class="sbb"><div class="sbf" style="width:100%"></div></div></div>
+      <div class="sc" style="--sc:#3182f6;--sb:#ebf3fe" onclick="td(&#39;신청전&#39;,this)"><div class="sn">신청전</div><div class="sv">470<em>건</em></div><div class="spct">19.2%</div><div class="sbb"><div class="sbf" style="width:63%"></div></div></div>
+      <div class="sc" style="--sc:#8b5cf6;--sb:#f3f0ff" onclick="td(&#39;신청후&#39;,this)"><div class="sn">신청후~신고전</div><div class="sv">316<em>건</em></div><div class="spct">12.9%</div><div class="sbb"><div class="sbf" style="width:42%"></div></div></div>
+      <div class="sc" style="--sc:#ff6b2b;--sb:#fff3ee" onclick="td(&#39;신고후&#39;,this)"><div class="sn">신고후~결정전</div><div class="sv">87<em>건</em></div><div class="spct">3.5%</div><div class="sbb"><div class="sbf" style="width:12%"></div></div></div>
+      <div class="sc" style="--sc:#00b493;--sb:#e8faf6" onclick="td(&#39;결제완료&#39;,this)"><div class="sn">결제완료</div><div class="sv">33<em>건</em></div><div class="spct">1.3%</div><div class="sbb"><div class="sbf" style="width:4%"></div></div></div>
+    </div>
+    <div class="gl" style="margin-top:16px">기타 분류</div>
+    <div class="sg" style="grid-template-columns:repeat(4,1fr)">
+      <div class="sc" style="--sc:#0891b2;--sb:#e0f7fa" onclick="td(&#39;계정&#39;,this)"><div class="sn">계정</div><div class="sv">643<em>건</em></div><div class="spct">26.2%</div><div class="sbb"><div class="sbf" style="width:86%"></div></div></div>
+      <div class="sc" style="--sc:#6b7684;--sb:#f2f4f6" onclick="td(&#39;기타&#39;,this)"><div class="sn">기타</div><div class="sv">124<em>건</em></div><div class="spct">5.1%</div><div class="sbb"><div class="sbf" style="width:17%"></div></div></div>
+      <div class="sc" style="--sc:#db2777;--sb:#fdf2f8" onclick="td(&#39;서비스&#39;,this)"><div class="sn">서비스문의</div><div class="sv">32<em>건</em></div><div class="spct">1.3%</div><div class="sbb"><div class="sbf" style="width:4%"></div></div></div>
+      <div class="sc" style="--sc:#b0b8c1;--sb:#f8f9fa;cursor:default"><div class="sn">미분류</div><div class="sv">164<em>건</em></div><div class="spct">전체 대비 6.3%</div><div class="sbb"><div class="sbf" style="background:#b0b8c1;width:22%"></div></div></div>
+    </div>
+    <div class="det" id="det-환급완료"><div class="dh"><div class="dt" style="color:#f04452">📌 환급완료 · 세부 유형</div><span style="font-size:12px;color:var(--g500)">747건</span></div><div class="tl"><div class="tr2"><span class="tn">환급금수령/미입금</span><div class="tbb"><div class="tbf" style="background:#f04452;width:100%"></div></div><span class="tc">117건</span></div><div class="tr2"><span class="tn">결제/C단계+추심</span><div class="tbb"><div class="tbf" style="background:#f04452;width:82%"></div></div><span class="tc">96건</span></div><div class="tr2"><span class="tn">환급금수령/지방세</span><div class="tbb"><div class="tbf" style="background:#f04452;width:69%"></div></div><span class="tc">81건</span></div><div class="tr2"><span class="tn">환급금수령/충당</span><div class="tbb"><div class="tbf" style="background:#f04452;width:62%"></div></div><span class="tc">72건</span></div><div class="tr2"><span class="tn">결제/수수료</span><div class="tbb"><div class="tbf" style="background:#f04452;width:61%"></div></div><span class="tc">71건</span></div></div></div>
+    <div class="det" id="det-신청전"><div class="dh"><div class="dt" style="color:#3182f6">📌 신청전 · 세부 유형</div><span style="font-size:12px;color:var(--g500)">470건</span></div><div class="tl"><div class="tr2"><span class="tn">경정청구/조회및신청</span><div class="tbb"><div class="tbf" style="background:#3182f6;width:100%"></div></div><span class="tc">164건</span></div><div class="tr2"><span class="tn">수수료/신청전</span><div class="tbb"><div class="tbf" style="background:#3182f6;width:29%"></div></div><span class="tc">47건</span></div><div class="tr2"><span class="tn">경정청구/폐업</span><div class="tbb"><div class="tbf" style="background:#3182f6;width:24%"></div></div><span class="tc">40건</span></div><div class="tr2"><span class="tn">마케팅/수신거부</span><div class="tbb"><div class="tbf" style="background:#3182f6;width:24%"></div></div><span class="tc">40건</span></div><div class="tr2"><span class="tn">환급금/발생이유</span><div class="tbb"><div class="tbf" style="background:#3182f6;width:23%"></div></div><span class="tc">37건</span></div></div></div>
+    <div class="det" id="det-신청후"><div class="dh"><div class="dt" style="color:#8b5cf6">📌 신청후~신고전 · 세부 유형</div><span style="font-size:12px;color:var(--g500)">316건</span></div><div class="tl"><div class="tr2"><span class="tn">경정청구/취소</span><div class="tbb"><div class="tbf" style="background:#8b5cf6;width:100%"></div></div><span class="tc">236건</span></div><div class="tr2"><span class="tn">경정청구/환급불가</span><div class="tbb"><div class="tbf" style="background:#8b5cf6;width:18%"></div></div><span class="tc">43건</span></div><div class="tr2"><span class="tn">경정청구/진행일정</span><div class="tbb"><div class="tbf" style="background:#8b5cf6;width:10%"></div></div><span class="tc">23건</span></div><div class="tr2"><span class="tn">지수/설문</span><div class="tbb"><div class="tbf" style="background:#8b5cf6;width:1%"></div></div><span class="tc">3건</span></div><div class="tr2"><span class="tn">계좌/수정</span><div class="tbb"><div class="tbf" style="background:#8b5cf6;width:1%"></div></div><span class="tc">3건</span></div></div></div>
+    <div class="det" id="det-신고후"><div class="dh"><div class="dt" style="color:#ff6b2b">📌 신고후~환급결정전 · 세부 유형</div><span style="font-size:12px;color:var(--g500)">87건</span></div><div class="tl"><div class="tr2"><span class="tn">환급일정/결과확인</span><div class="tbb"><div class="tbf" style="background:#ff6b2b;width:100%"></div></div><span class="tc">23건</span></div><div class="tr2"><span class="tn">환급금/변동</span><div class="tbb"><div class="tbf" style="background:#ff6b2b;width:96%"></div></div><span class="tc">22건</span></div><div class="tr2"><span class="tn">환급금/상세내역</span><div class="tbb"><div class="tbf" style="background:#ff6b2b;width:78%"></div></div><span class="tc">18건</span></div><div class="tr2"><span class="tn">수수료/진행중</span><div class="tbb"><div class="tbf" style="background:#ff6b2b;width:52%"></div></div><span class="tc">12건</span></div><div class="tr2"><span class="tn">결과신고완료</span><div class="tbb"><div class="tbf" style="background:#ff6b2b;width:17%"></div></div><span class="tc">4건</span></div></div></div>
+    <div class="det" id="det-결제완료"><div class="dh"><div class="dt" style="color:#00b493">📌 결제완료 · 세부 유형</div><span style="font-size:12px;color:var(--g500)">33건</span></div><div class="tl"><div class="tr2"><span class="tn">경정청구/신고서</span><div class="tbb"><div class="tbf" style="background:#00b493;width:100%"></div></div><span class="tc">18건</span></div><div class="tr2"><span class="tn">경정청구/현금영수증</span><div class="tbb"><div class="tbf" style="background:#00b493;width:39%"></div></div><span class="tc">7건</span></div><div class="tr2"><span class="tn">경정청구/세금계산서</span><div class="tbb"><div class="tbf" style="background:#00b493;width:33%"></div></div><span class="tc">6건</span></div><div class="tr2"><span class="tn">경정청구/환불</span><div class="tbb"><div class="tbf" style="background:#00b493;width:11%"></div></div><span class="tc">2건</span></div></div></div>
+    <div class="det" id="det-계정"><div class="dh"><div class="dt" style="color:#0891b2">📌 계정 · 세부 유형</div><span style="font-size:12px;color:var(--g500)">643건</span></div><div class="tl"><div class="tr2"><span class="tn">회원&amp;계정/탈퇴&amp;해지</span><div class="tbb"><div class="tbf" style="background:#0891b2;width:100%"></div></div><span class="tc">628건</span></div><div class="tr2"><span class="tn">회원&amp;계정</span><div class="tbb"><div class="tbf" style="background:#0891b2;width:1%"></div></div><span class="tc">8건</span></div><div class="tr2"><span class="tn">회원&amp;계정/정보변경</span><div class="tbb"><div class="tbf" style="background:#0891b2;width:1%"></div></div><span class="tc">7건</span></div></div></div>
+    <div class="det" id="det-기타"><div class="dh"><div class="dt" style="color:#6b7684">📌 기타 · 세부 유형</div><span style="font-size:12px;color:var(--g500)">124건</span></div><div class="tl"><div class="tr2"><span class="tn">기타/문의미확인</span><div class="tbb"><div class="tbf" style="background:#6b7684;width:100%"></div></div><span class="tc">90건</span></div><div class="tr2"><span class="tn">케어문의</span><div class="tbb"><div class="tbf" style="background:#6b7684;width:24%"></div></div><span class="tc">22건</span></div><div class="tr2"><span class="tn">기타/테스트</span><div class="tbb"><div class="tbf" style="background:#6b7684;width:12%"></div></div><span class="tc">11건</span></div></div></div>
+    <div class="det" id="det-서비스"><div class="dh"><div class="dt" style="color:#db2777">📌 서비스문의 · 세부 유형</div><span style="font-size:12px;color:var(--g500)">32건</span></div><div class="tl"><div class="tr2"><span class="tn">기타/타서비스</span><div class="tbb"><div class="tbf" style="background:#db2777;width:100%"></div></div><span class="tc">16건</span></div><div class="tr2"><span class="tn">이벤트</span><div class="tbb"><div class="tbf" style="background:#db2777;width:56%"></div></div><span class="tc">9건</span></div><div class="tr2"><span class="tn">기타/세무상담</span><div class="tbb"><div class="tbf" style="background:#db2777;width:19%"></div></div><span class="tc">3건</span></div><div class="tr2"><span class="tn">비즈넵환급</span><div class="tbb"><div class="tbf" style="background:#db2777;width:19%"></div></div><span class="tc">3건</span></div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="sh"><div><div class="st">단계별 문의 비중</div><div class="sd">전체 2,452건 분류 기준</div></div></div>
+    <div class="sbc">
+      <div class="sbcr"><div class="sbcl">환급완료</div><div class="sbcw"><div class="sbcf" style="background:#f04452;width:30.5%"><span class="sbcfl">30.5%</span></div></div><div class="sbcn">747건</div></div>
+      <div class="sbcr"><div class="sbcl">계정</div><div class="sbcw"><div class="sbcf" style="background:#0891b2;width:26.2%"><span class="sbcfl">26.2%</span></div></div><div class="sbcn">643건</div></div>
+      <div class="sbcr"><div class="sbcl">신청전</div><div class="sbcw"><div class="sbcf" style="background:#3182f6;width:19.2%"><span class="sbcfl">19.2%</span></div></div><div class="sbcn">470건</div></div>
+      <div class="sbcr"><div class="sbcl">신청후~신고전</div><div class="sbcw"><div class="sbcf" style="background:#8b5cf6;width:12.9%"><span class="sbcfl">12.9%</span></div></div><div class="sbcn">316건</div></div>
+      <div class="sbcr"><div class="sbcl">기타</div><div class="sbcw"><div class="sbcf" style="background:#6b7684;width:5.1%"><span class="sbcfl">5.1%</span></div></div><div class="sbcn">124건</div></div>
+      <div class="sbcr"><div class="sbcl">신고후~결정전</div><div class="sbcw"><div class="sbcf" style="background:#ff6b2b;width:3.5%"><span class="sbcfl">3.5%</span></div></div><div class="sbcn">87건</div></div>
+      <div class="sbcr"><div class="sbcl">결제완료</div><div class="sbcw"><div class="sbcf" style="background:#00b493;width:1.3%"><span class="sbcfl">1.3%</span></div></div><div class="sbcn">33건</div></div>
+      <div class="sbcr"><div class="sbcl">서비스문의</div><div class="sbcw"><div class="sbcf" style="background:#db2777;width:1.3%"><span class="sbcfl">1.3%</span></div></div><div class="sbcn">32건</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sh"><div><div class="st">월별 주요 지표 추이</div><div class="sd">셀 클릭 후 수정 · 행 추가로 누적 관리</div></div><button class="btn btn-o btn-sm" onclick="addRow()">+ 행 추가</button></div>
+    <table class="tt"><thead><tr><th>월</th><th>문의량</th><th>전월대비</th><th>VIP 인입</th><th>CSAT</th><th>CSAT 참여율</th><th>환급금 조회수</th><th></th></tr></thead>
+    <tbody id="tb">
+      <tr><td><input value="2026-01"></td><td><input type="number" value="2616"></td><td><input value="—"></td><td><input type="number" value="51"></td><td><input type="number" step=".01" value="2.90"></td><td><input value="3.13%"></td><td><input type="number" value="100341"></td><td><button class="db" onclick="this.closest(&#39;tr&#39;).remove()">✕</button></td></tr>
+      <tr><td><input value="2026-02"></td><td><input type="number" value="2616"></td><td><input value="0.0%" style="color:var(--g500);font-weight:600"></td><td><input type="number" value="51"></td><td><input type="number" step=".01" value="2.85"></td><td><input value="3.1%"></td><td><input placeholder="직접 입력"></td><td><button class="db" onclick="this.closest(&#39;tr&#39;).remove()">✕</button></td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="card">
+    <div class="sh"><div><div class="st">🚨 이달의 이슈</div><div class="sd">오류, 버그, 운영 이슈를 기록해요</div></div></div>
+    <div class="fg4"><div><label class="lbl">이슈 유형</label><select class="inp" id="itype"><option value="bug">🔴 버그/오류</option><option value="ops">🟡 운영이슈</option><option value="cs">🔵 CS 급증</option><option value="etc">⚪ 기타</option></select></div><div><label class="lbl">이슈 제목</label><input class="inp" id="itit" placeholder="예: 간편인증 오류"></div><div><label class="lbl">발생일</label><input class="inp" id="idate" placeholder="예: 02.10"></div><div><label class="lbl">상태</label><select class="inp" id="istat"><option value="r">✅ 해결완료</option><option value="i">🔄 처리중</option><option value="p">⏳ 모니터링</option></select></div></div>
+    <div style="margin-bottom:14px"><label class="lbl">상세 내용</label><input class="inp" id="idesc" placeholder="이슈 내용, 영향 범위, 조치 사항 등"></div>
+    <div style="margin-bottom:20px"><button class="btn btn-b btn-sm" onclick="addIssue()">+ 이슈 추가</button></div>
+    <div class="il" id="ilist">
+      <div class="ii"><div class="ib2" style="background:#fffbeb;color:#d97706">🟡 운영이슈</div><div class="ibo"><div class="it">경정청구/취소 문의 급증</div><div class="id2">취소 236건 · 신청후~신고전의 74.7% 차지 · 취소 원인 분석 필요</div><div class="im">02월 · 🔄 처리중</div></div><button class="db" onclick="this.closest(&#39;.ii&#39;).remove()">✕</button></div>
+      <div class="ii"><div class="ib2" style="background:#e0f7fa;color:#0891b2">🔵 CS 급증</div><div class="ibo"><div class="it">계정 탈퇴&amp;해지 문의 급증</div><div class="id2">탈퇴&amp;해지 628건 · 계정 전체의 97.7% · 이탈 원인 파악 및 리텐션 대책 필요</div><div class="im">02월 · 🔄 처리중</div></div><button class="db" onclick="this.closest(&#39;.ii&#39;).remove()">✕</button></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sh"><div><div class="st">✅ 이번달 개선 내역</div><div class="sd">진행한 개선 작업을 기록해요</div></div></div>
+    <div class="fg3"><div><label class="lbl">개선 항목명</label><input class="inp" id="imtit" placeholder="예: FAQ 추가"></div><div><label class="lbl">우선순위</label><select class="inp" id="impr"><option value="h">🔴 높음</option><option value="m">🟡 중간</option><option value="l">🟢 낮음</option></select></div><div><label class="lbl">개선 결과</label><input class="inp" id="imdesc" placeholder="예: 문의 23% 감소"></div></div>
+    <div style="margin-bottom:20px"><button class="btn btn-b btn-sm" onclick="addImprove()">+ 추가</button></div>
+    <div class="iml" id="imlist">
+      
+      
+    <div class="imi"><div class="pd" style="background:#f04452"></div><div class="imb"><div class="imt">테스트다 임마</div><div class="imd">—</div></div><button class="db" onclick="this.closest(&#39;.imi&#39;).remove()">✕</button></div></div>
+  </div>
+
+  <div class="card">
+    <div class="st" style="margin-bottom:14px">💬 이달의 총평</div>
+    <textarea class="inp ta" id="sum">2월은 계정(탈퇴&amp;해지) 문의가 643건(26.2%)으로 급증하며 심각한 이탈 신호가 감지됐다. 특히 탈퇴&amp;해지가 628건으로 계정 문의의 97.7%를 차지했으며, 경정청구/취소 문의도 236건으로 신청후~신고전의 74.7%를 차지해 신청 취소 원인 파악이 시급하다. CSAT는 2.85점으로 유지됐으나 참여율(3.1%)은 낮은 수준이다.</textarea>
+    <div style="margin-top:12px"><button class="btn btn-b btn-sm" onclick="showToast(&#39;저장됐어요 ✓&#39;)">저장</button></div>
+  </div>
+</div>
+
+<div class="ov" id="ov"><div class="spinner"></div><p>PDF 생성 중...</p></div>
+<div class="toast" id="toast">저장됐어요 ✓</div>
+
+<script>
+let os=null;
+function td(id,el){
+  const w=os===id;
+  document.querySelectorAll('.sc').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.det').forEach(d=>d.classList.remove('open'));
+  if(!w){document.getElementById('det-'+id).classList.add('open');el.classList.add('active');os=id;}else{os=null;}
+}
+function addRow(){
+  const tr=document.createElement('tr');
+  tr.innerHTML='<td><input placeholder="YYYY-MM"></td><td><input type="number"></td><td><input placeholder="—"></td><td><input type="number"></td><td><input type="number" step=".01"></td><td><input></td><td><input type="number"></td><td><button class="db" onclick="this.closest(\'tr\').remove()">✕</button></td>';
+  document.getElementById('tb').appendChild(tr);
+}
+function addIssue(){
+  const type=document.getElementById('itype').value;
+  const tit=document.getElementById('itit').value.trim();
+  const date=document.getElementById('idate').value.trim();
+  const stat=document.getElementById('istat').value;
+  const desc=document.getElementById('idesc').value.trim();
+  if(!tit){showToast('이슈 제목을 입력해주세요');return;}
+  const tm={bug:['🔴 버그/오류','#fff0f1','#f04452'],ops:['🟡 운영이슈','#fffbeb','#d97706'],cs:['🔵 CS 급증','#ebf3fe','#3182f6'],etc:['⚪ 기타','#f2f4f6','#6b7684']};
+  const sm={r:'✅ 해결완료',i:'🔄 처리중',p:'⏳ 모니터링'};
+  const[l,bg,c]=tm[type];
+  const el=document.createElement('div');el.className='ii';
+  el.innerHTML=`<div class="ib2" style="background:${bg};color:${c}">${l}</div><div class="ibo"><div class="it">${tit}</div><div class="id2">${desc||'—'}</div><div class="im">${date||''} · ${sm[stat]}</div></div><button class="db" onclick="this.closest('.ii').remove()">✕</button>`;
+  document.getElementById('ilist').appendChild(el);
+  ['itit','idate','idesc'].forEach(i=>document.getElementById(i).value='');
+  showToast('이슈 추가됐어요 ✓');
+}
+function addImprove(){
+  const t=document.getElementById('imtit').value.trim();
+  const d=document.getElementById('imdesc').value.trim();
+  const p=document.getElementById('impr').value;
+  if(!t){showToast('항목명을 입력해주세요');return;}
+  const cm={h:'#f04452',m:'#ffc107',l:'#00b493'};
+  const el=document.createElement('div');el.className='imi';
+  el.innerHTML=`<div class="pd" style="background:${cm[p]}"></div><div class="imb"><div class="imt">${t}</div><div class="imd">${d||'—'}</div></div><button class="db" onclick="this.closest('.imi').remove()">✕</button>`;
+  document.getElementById('imlist').appendChild(el);
+  document.getElementById('imtit').value='';document.getElementById('imdesc').value='';
+  showToast('추가됐어요 ✓');
+}
+function copyLink(){
+  const url=window.location.href;
+  if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>showToast('링크 복사됐어요! 🔗'));}
+  else{const el=document.createElement('textarea');el.value=url;document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);showToast('링크 복사됐어요! 🔗');}
+}
+async function downloadPDF(){
+  document.getElementById('ov').classList.add('show');
+  const allDets=document.querySelectorAll('.det');
+  const wasOpen=[];
+  allDets.forEach(d=>{wasOpen.push(d.classList.contains('open'));d.classList.add('open');});
+  const hdr=document.querySelector('.hdr');
+  hdr.style.position='relative';
+  const pdfHide=[];
+  document.querySelectorAll('.btn:not(.btn-p),.db,.fg3,.fg4').forEach(el=>{pdfHide.push({el,disp:el.style.display});el.style.display='none';});
+  document.querySelectorAll('[style*="margin-top:12px"],[style*="margin-bottom:20px"]').forEach(el=>{pdfHide.push({el,disp:el.style.display});el.style.display='none';});
+  await new Promise(r=>setTimeout(r,300));
+  try{
+    const{jsPDF}=window.jspdf;
+    const c=await html2canvas(document.getElementById('rc'),{scale:1.5,useCORS:true,backgroundColor:'#f8f9fa',logging:false,windowWidth:1080});
+    const img=c.toDataURL('image/png');
+    const pdf=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+    const pw=pdf.internal.pageSize.getWidth(),ph=pdf.internal.pageSize.getHeight();
+    const iw=pw,ih=(c.height*iw)/c.width;
+    let rem=ih,yOff=0;
+    while(rem>0){pdf.addImage(img,'PNG',0,-yOff,iw,ih);rem-=ph;yOff+=ph;if(rem>0)pdf.addPage();}
+    pdf.save('2026-02-voc-report.pdf');
+    showToast('PDF 저장 완료! ✓');
+  }catch(e){showToast('PDF 생성 중 오류가 발생했어요');}
+  finally{
+    allDets.forEach((d,i)=>{if(!wasOpen[i])d.classList.remove('open');});
+    hdr.style.position='sticky';
+    pdfHide.forEach(({el,disp})=>{el.style.display=disp;});
+    document.getElementById('ov').classList.remove('show');
+  }
+}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
+</script>
+
+
+</body></html>
